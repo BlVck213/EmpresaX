@@ -6,16 +6,32 @@ function lerArquivo($nomeArquivo){
     return $jsonArray;
 }
 
-$funcionariosFiltro = [];
+  
+
 function buscarFuncionario($funcionarios, $NSD ){
+
+    $funcionariosFiltro = [];
+
     foreach($funcionarios as $funcionario){
-        if($funcionario->nome == $NSD) {
-    $funcionariosFiltro[] = $funcionario; 
-        } else if($funcionario->sobrenome == $NSD) {
-            $funcionariosFiltro[] = $funcionario; 
-        } else if($funcionario->departamento == $NSD) {
+        if(
+        strpos($funcionario->nome , $NSD) !== false
+            ||
+        strpos($funcionario->sobrenome , $NSD) !== false      
+            ||
+        strpos($funcionario->departamento , $NSD) !== false
+        ){
             $funcionariosFiltro[] = $funcionario; 
         }
+
     }
     return $funcionariosFiltro;
 }
+
+function adicionarFuncionario($nomeArquivo, $novoFuncionario){
+    $funcionarios = lerArquivo($nomeArquivo);
+    $funcionarios[] = $novoFuncionario;
+    $json = json_encode($funcionarios);
+    file_put_contents($nomeArquivo, $json);
+
+}
+        

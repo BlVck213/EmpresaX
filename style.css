@@ -4,9 +4,155 @@
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
-    height: 100vh;
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(56, 56, 56);
+    color: rgb(207, 207, 207);
+}
+h1{
+    margin-top: 25px;
+}
+p{
+    font-size: 16px;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    gap: 10px;
+}
+form label{
+    text-align: start;
+    font-size: 10px;
+}
+form input{
+    border: 1px solid black;
+    padding-left: 3px;
+    outline: none;
+    width: 800px;
+    height: 40px;
+}
+
+form input textarea{
+    font-size: 40px;
+}
+
+form .buscar{
+    background-color: rgb(255, 255, 0);
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+    border: 2px solid black;
+   
+}
+
+.ADD{
+    background-color: rgb(255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid black;
+   
+}
+
+table{
+    font-size: 14px;
+    text-align: center;
+    border-collapse: collapse;
+    width: 1044px;
+    margin-bottom: 50px;
+}
+
+table td, th{
+    border: 1px solid black;
+    padding: 4px;
+    background-color: rgb(27, 27, 27);
+    color: rgb(207, 207, 207);
+}
+
+.container{
+    position: absolute;
+width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: yellow;
+    top: 0;
+    left: 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 20px black;
+    color: black;
+    
+}
+
+.container h1{
+    margin-bottom: 10px;
+}
+
+.container label{
+    font-size: 15px;
+}
+
+.container input{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+}
+.container select{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.container button{
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid black;
+    height: 30px;
+
+    font-weight: bold;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.container button:hover{
+    box-shadow: 0px 0px 20px black;
+}
+
+.RADIO-ROW{
+    display: flex;
+    flex-direction: row;
+  align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+.RADIO-ROW input{
+    width: 14px;
+    height: 14px;
+    margin:0;
 }
