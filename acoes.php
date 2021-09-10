@@ -4,7 +4,7 @@ require("./funcoes.php");
 
 $novoFuncionario = [
 
-    "id" => $_POST["id"],
+    "id" => count(lerArquivo("funcionarios.json")) + 1,
     "nome" => $_POST["nome"],
     "sobrenome" => $_POST["sobrenome"],
     "email" => $_POST["email"],

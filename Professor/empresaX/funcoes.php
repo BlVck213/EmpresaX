@@ -4,30 +4,30 @@ function lerArquivo($nomeArquivo){
 
     $arquivo = file_get_contents($nomeArquivo);
 
-    $jsonArray = json_decode($arquivo);
+    $arquivoArr = json_decode($arquivo);
 
-    return $jsonArray;
+    return $arquivoArr;
+
 }
 
-  
-
-function buscarFuncionario($funcionarios, $filtro ){
+function buscarFuncionario($funcionarios, $filtro){
 
     $funcionariosFiltro = [];
 
     foreach($funcionarios as $funcionario){
         if(
-        strpos($funcionario->nome , $filtro) !== false
+            strpos($funcionario->first_name, $filtro) !== false
+            || 
+            strpos($funcionario->last_name, $filtro) !== false
             ||
-        strpos($funcionario->sobrenome , $filtro) !== false      
-            ||
-        strpos($funcionario->departamento , $filtro) !== false
+            strpos($funcionario->department, $filtro) !== false
         ){
-            $funcionariosFiltro[] = $funcionario; 
+            $funcionariosFiltro[] = $funcionario;
         }
-
     }
+
     return $funcionariosFiltro;
+
 }
 
 function adicionarFuncionario($nomeArquivo, $novoFuncionario){
@@ -41,12 +41,12 @@ function adicionarFuncionario($nomeArquivo, $novoFuncionario){
     file_put_contents($nomeArquivo, $json);
 
 }
-  
 
 function deletarFuncionario($nomeArquivo, $idFuncionario){
 
     $funcionarios = lerArquivo($nomeArquivo);
 
+    //percorre os funcionários e apaga o id procurado
     foreach($funcionarios as $chave => $funcionario){
         if($funcionario->id == $idFuncionario){
             unset($funcionarios[$chave]);

@@ -46,31 +46,65 @@ p{
     font-size: 40px;
 }
 
-.search-form .buscar{
-    background-color: rgb(255, 255, 0);
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 5px;
-    padding-right: 5px;
+.search-form .material-icons{
+    background-color: rgb(207, 207, 207);
+    width: 40px;
     height: 40px;
-    border: 2px solid black;
+    border: 1px solid black;
    
 }
 
-.ADD{
-    background-color: rgb(255, 255, 0);
+.row{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 40px;
-    line-height: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    border: 2px solid black;
-   margin-bottom: 10px;
+    gap: 0px;
 }
+
+.ADD{
+    background-color: rgb(0, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+.ADD:hover{
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+}
+
+
+.delete{
+    background-color: rgb(255, 17, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.delete:hover{
+    box-shadow: 0px 0px 20px rgb(255, 17, 0);
+}
+
+
+.edit{
+    background-color: rgb(255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.edit:hover{
+    box-shadow: 0px 0px 20px rgb(255, 255, 0);
+}
+
 
 table{
     font-size: 14px;
@@ -86,6 +120,7 @@ table td, th{
     background-color: rgb(27, 27, 27);
     color: rgb(207, 207, 207);
 }
+
 
 .funcionario-div{
     position: fixed;
@@ -107,10 +142,11 @@ table td, th{
     justify-content: center;
     width: 30%;
     height: fit-content;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0px 0px 20px black;
-    color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: black;
+    box-shadow: 0px 0px 20px white;
+    color: white;
 }
 
 .funcionario-div h1{
@@ -135,19 +171,102 @@ table td, th{
     margin-bottom: 20px;
     height: 20px;
     padding-left: 2px;
+    border: solid 1px white;
 }
 
 .funcionario-div button{
     width: 100%;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid white;
     height: 20px;
-
+   margin-bottom: 30px;
     font-weight: bold;
     transition: .2s;
     cursor: pointer;
+    color: white;
 }
 
-.funcionario-div button:hover{
-    box-shadow: 0px 0px 20px black;
+.salvar:hover{
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
 } 
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.exit:hover{
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+}
+
+
+/* .delete-div{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0009;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.delete-form{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    width: 30%;
+    height: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: black;
+    box-shadow: 0px 0px 20px white;
+    color: white;
+}
+
+
+.delete-div input{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+}
+
+.delete-div button{
+    width: 100%;
+    border-radius: 20px;
+    border: solid 1px black;
+    height: 30px;
+   margin-bottom: 30px;
+    font-weight: bold;
+    transition: .2s;
+    cursor: pointer;
+    color: black;
+}
+.exitButton{
+    background-color: white;
+}
+.deleteButton{
+    background-color: red;
+}
+
+.botoesDeletar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+ */

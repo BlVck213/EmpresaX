@@ -9,6 +9,7 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
 }
 
 
+
 ?>
 
 
@@ -18,6 +19,7 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="script.js" defer></script>
     <title>Empresa X</title>
@@ -29,45 +31,52 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
 
     <form class="search-form" >
         <input type="search" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>" name="buscarFuncionario" placeholder="Buscar Funcionário através de Nome ou Sobrenome ou Departamento" required>
-        <button class="buscar">Buscar</button>
+        <button class="material-icons">person_search</button>
     </form>
 
-    <button class="ADD" id="ADD" name="ADD">Adicionar Funcionário</button>
+    <div class="row">
+
+        <button class="ADD" id="add" name="add"><img src="icons/adicionar.png" alt=""></button>
+
+    </div>
+
+
 
     <div class="funcionario-div">
 
-    <form class="funcionario-form" action="acoes.php" method="POST">
+        <form class="funcionario-form" action="acoes.php" method="POST">
 
-            <div class="Novo">
-                <h1>Adicionar Novo Funcionário!</h1>
+                <div class="Novo">
+                    <h1>Adicionar Novo Funcionário!</h1>
+                </div>
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required/>
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" required/>
+
+                <label for="email">Email:</label>
+                <input type="text" name="email" required/>
+
+                <label for="sexo">Sexo:</label>
+                <input type="text" name="sexo" required/>
+
+                <label for="enderecoIP">Endereço IP:</label>
+                <input type="text"  name="enderecoIP" required/>
+
+                <label for="pais">País:</label>
+                <input type="text" name="pais" required/>
+
+                <label for="departamento">Departamento:</label>
+                <input type="text" name="departamento" required/>
+
+
+            <div class="botoes">    
+                <button type="exit" class="exit" id="sair">Cancelar</button>
+                <button class="salvar" type="submit">Salvar</button>
             </div>
-
-            <label for="id">ID:</label>
-            <input type="text" name="id" required/>
-
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" required/>
-
-            <label for="sobrenome">Sobrenome:</label>
-            <input type="text" name="sobrenome" required/>
-
-            <label for="email">Email:</label>
-            <input type="text" name="email" required/>
-
-            <label for="sexo">Sexo:</label>
-            <input type="text" name="sexo" required/>
-
-            <label for="enderecoIP">Endereço IP:</label>
-            <input type="text"  name="enderecoIP" required/>
-
-            <label for="pais">País:</label>
-            <input type="text" name="pais" required/>
-
-            <label for="departamento">Departamento:</label>
-            <input type="text" name="departamento" required/>
-
-            <button>Salvar</button>
-    </form>
+        </form>
 
     </div>
 
@@ -82,10 +91,11 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
             <th>Endereço Ip</th>
             <th>País</th>
             <th>Departamento</th>
+            <th>Ações</th>
         </tr>
 
         <?php
-        foreach($funcionarios as $funcionario) :
+        foreach($funcionarios as $funcionario) {
         ?>
         <tr>
             <td> <?= $funcionario->id ?> </td>
@@ -96,9 +106,15 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
             <td> <?= $funcionario->enderecoIP ?> </td>
             <td> <?= $funcionario->pais ?> </td>
             <td> <?= $funcionario->departamento ?> </td>
+            <td>
+                <div class="row">
+                    <button class="edit" id="edit" name="edit"><img src="icons/editar.png" alt=""></button>
+                    <button onclick="deletarFuncionario(<?=$funcionario->id?>)" class="delete" id="delete" name="delete"><img src="icons/deletar.png" alt=""></button>
+                </div>
+            </td>
         </tr>
         <?php
-        endforeach;
+        }
         ?>
 
 
