@@ -12,13 +12,15 @@ body{
     background-color: rgb(56, 56, 56);
     color: rgb(207, 207, 207);
 }
+
+
 h1{
     margin-top: 25px;
 }
 p{
     font-size: 16px;
 }
-form{
+.search-form{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,11 +30,11 @@ form{
     width: 100%;
     gap: 10px;
 }
-form label{
+.serch-form label{
     text-align: start;
     font-size: 10px;
 }
-form input{
+.search-form input{
     border: 1px solid black;
     padding-left: 3px;
     outline: none;
@@ -40,11 +42,11 @@ form input{
     height: 40px;
 }
 
-form input textarea{
+.search-form input textarea{
     font-size: 40px;
 }
 
-form .buscar{
+.search-form .buscar{
     background-color: rgb(255, 255, 0);
     font-size: 14px;
     font-weight: bold;
@@ -63,11 +65,11 @@ form .buscar{
     padding-left: 5px;
     padding-right: 5px;
     height: 40px;
-    line-height: 30px;
+    line-height: 10px;
     font-size: 14px;
     font-weight: bold;
     border: 2px solid black;
-   
+   margin-bottom: 10px;
 }
 
 table{
@@ -85,74 +87,67 @@ table td, th{
     color: rgb(207, 207, 207);
 }
 
-.container{
+.funcionario-div{
     position: absolute;
-width: 100vw;
+    width: 100vw;
     height: 100vh;
+    background-color: #0009;
+    top: 0;
+    left: 0;
     display: none;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: yellow;
-    top: 0;
-    left: 0;
+
 }
 
-.form{
+.funcionario-form{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items:flex-start;
     justify-content: center;
+    width: 30%;
+    height: fit-content;
     padding: 30px;
     background-color: white;
     box-shadow: 0px 0px 20px black;
     color: black;
-    
 }
 
-.container h1{
-    margin-bottom: 10px;
+.funcionario-div h1{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.Novo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.container label{
+
+.funcionario-div label{
     font-size: 15px;
+    font-weight: bold;
 }
 
-.container input{
+.funcionario-div input{
     width: 100%;
-    margin-bottom: 10px;
-    height: 30px;
-}
-.container select{
-    width: 100%;
-    margin-bottom: 10px;
-    height: 30px;
+    margin-bottom: 20px;
+    height: 20px;
+    padding-left: 2px;
 }
 
-.container button{
+.funcionario-div button{
     width: 100%;
     background-color: transparent;
     border: 2px solid black;
-    height: 30px;
+    height: 20px;
 
     font-weight: bold;
     transition: .2s;
     cursor: pointer;
 }
 
-.container button:hover{
+.funcionario-div button:hover{
     box-shadow: 0px 0px 20px black;
-}
-
-.RADIO-ROW{
-    display: flex;
-    flex-direction: row;
-  align-items: center;
-    gap: 5px;
-    padding: 5px;
-}
-.RADIO-ROW input{
-    width: 14px;
-    height: 14px;
-    margin:0;
-}
+} 
