@@ -27,7 +27,7 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
 <body>
 
     <h1>Funcionários da Empresa X</h1>
-    <h2>A empresa conta com <?= count(lerArquivo("funcionarios.json")) ?> Funcionários</h2>
+    <h2>A empresa conta com <?=count(lerArquivo("./funcionarios.json"))?> Funcionários</h2>
 
     <form class="search-form" >
         <input type="search" value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>" name="buscarFuncionario" placeholder="Buscar Funcionário através de Nome ou Sobrenome ou Departamento" required>
@@ -80,7 +80,7 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
 
     </div>
 
-    <table border="1">
+    <table>
 
         <tr>
             <th>ID</th>
@@ -109,7 +109,7 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
             <td>
                 <div class="row">
                     <button class="edit" id="edit" name="edit"><img src="icons/editar.png" alt=""></button>
-                    <button onclick="deletarFuncionario(<?=$funcionario->id?>)" class="delete" id="delete" name="delete"><img src="icons/deletar.png" alt=""></button>
+                    <button onclick="deletar(<?= $funcionario->id ?>)" class="delete" id="delete" name="delete"><img src="icons/deletar.png" alt=""></button>
                 </div>
             </td>
         </tr>

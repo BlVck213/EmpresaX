@@ -16,7 +16,7 @@ function Sair(){
 
 function deletar(idFuncionario){
 
-        let confirmacao = confirm("Deseja deletar este Funcionário?")
+        let confirmacao = confirm("Deseja deletar este Funcionário?");
 
         if(confirmacao){
         window.location = "acaoDeletar.php?id=" + idFuncionario;
