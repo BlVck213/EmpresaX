@@ -8,8 +8,6 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
     $funcionarios = buscarFuncionario($funcionarios, $_GET["buscarFuncionario"]);
 }
 
-
-
 ?>
 
 
@@ -39,7 +37,6 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
         <button class="ADD" id="add" name="add"><img src="icons/adicionar.png" alt=""></button>
 
     </div>
-
 
 
     <div class="funcionario-div">
@@ -73,12 +70,13 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
 
 
             <div class="botoes">    
-                <button type="exit" class="exit" id="sair">Cancelar</button>
+                <button action="./index.php" type="exit" class="exit" id="sair">Cancelar</button>
                 <button class="salvar" type="submit">Salvar</button>
             </div>
         </form>
 
     </div>
+
 
     <table>
 
@@ -108,7 +106,7 @@ if(isset($_GET["buscarFuncionario"]) && $_GET["buscarFuncionario"] != ""){
             <td> <?= $funcionario->departamento ?> </td>
             <td>
                 <div class="row">
-                    <button class="edit" id="edit" name="edit"><img src="icons/editar.png" alt=""></button>
+                    <button onclick="editar(<?= $funcionario->id ?>)"  class="edit" id="edit" name="edit"><img src="icons/editar.png" alt=""></button>
                     <button onclick="deletar(<?= $funcionario->id ?>)" class="delete" id="delete" name="delete"><img src="icons/deletar.png" alt=""></button>
                 </div>
             </td>

@@ -58,7 +58,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0px;
+    gap: 5px;
 }
 
 .ADD{
@@ -202,5 +202,65 @@ table td, th{
 .exit:hover{
     box-shadow: 0px 0px 20px rgb(255, 0, 0);
 }
+
+
+.funcionario-div2{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0009;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.funcionario-form2{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    width: 30%;
+    height: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: black;
+    box-shadow: 0px 0px 20px white;
+    color: white;
+}
+
+.funcionario-div2 h1{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+
+.funcionario-div2 label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.funcionario-div2 input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 20px;
+    padding-left: 2px;
+    border: solid 1px white;
+}
+
+.funcionario-div2 button{
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid white;
+    height: 20px;
+   margin-bottom: 30px;
+    font-weight: bold;
+    transition: .2s;
+    cursor: pointer;
+    color: white;
+}
+
+
 
 
