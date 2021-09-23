@@ -2,10 +2,9 @@
 
 require("./funcoes.php");
 
+$funcionarioEditado = [
 
-$novoFuncionario = [
-
-    "id" => count(lerArquivo("funcionarios.json")) + 1 ,
+    "id" => $_POST["id"],
     "nome" => $_POST["nome"],
     "sobrenome" => $_POST["sobrenome"],
     "email" => $_POST["email"],
@@ -16,6 +15,9 @@ $novoFuncionario = [
 
 ];
 
-adicionarFuncionario("./funcionarios.json" , $novoFuncionario);
+editarFuncionario("./funcionarios.json" , $funcionarioEditado);
 
-header("location: index.php");
+header('location: index.php');
+
+
+?>
