@@ -302,7 +302,7 @@ table td{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #0d36a8;
+    background: #0360c4;;
 
 }
 
@@ -327,8 +327,8 @@ table td{
 }
 
 .btn{
-    background-color: black;
-    border: black;
+    background-color: #007bff;;
+    border: #007bff;;
 }
 
 

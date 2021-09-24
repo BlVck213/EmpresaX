@@ -26,12 +26,12 @@
                     
                     <div class="form-group">
                         <label for="txt_usuario">Nome de Usuario</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario">
+                        <input type="text" class="form-control" name="usuario" id="usuario" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="txt_senha">Senha</label>
-                        <input type="password" class="form-control" name="senha" id="senha">
+                        <label for="txt_senha">Criar Senha</label>
+                        <input type="password" class="form-control" name="senha" id="senha" required>
                     </div>
 
                     <div class="form-group1">
