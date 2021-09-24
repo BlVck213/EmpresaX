@@ -13,6 +13,25 @@ body{
     color: rgb(207, 207, 207);
 }
 
+.toolbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.toolbar a{
+  color: rgb(223, 19, 4);
+}
+.toolbar a:hover{
+    background-color: red;
+    color: black;
+    box-shadow: 0px 0px 20px red;
+}
+
 
 h1{
     margin-top: 25px;
@@ -53,56 +72,58 @@ p{
     border: 1px solid black;
    
 }
+.material-icons:hover{
+    box-shadow: 0px 0px 20px rgb(207, 207, 207);
+}
 
 .row{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .ADD{
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(1, 206, 1);
     display: flex;
     align-items: center;
     justify-content: center; 
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
 }
 .ADD:hover{
-    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+    box-shadow: 0px 0px 20px rgb(1, 206, 1);
 }
 
 
 .delete{
-    background-color: rgb(255, 17, 0);
+    background-color: rgb(194, 19, 7);
     display: flex;
     align-items: center;
     justify-content: center; 
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
 }
 
 .delete:hover{
-    box-shadow: 0px 0px 20px rgb(255, 17, 0);
+    box-shadow: 0px 0px 20px rgb(194, 19, 7);
 }
 
 
 .edit{
-    background-color: rgb(255, 255, 0);
+    background-color: rgb(207, 207, 0);
     display: flex;
     align-items: center;
     justify-content: center; 
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
 }
 
 .edit:hover{
-    box-shadow: 0px 0px 20px rgb(255, 255, 0);
+    box-shadow: 0px 0px 20px rgb(207, 207, 0);
 }
 
 
@@ -114,12 +135,23 @@ table{
     margin-bottom: 50px;
 }
 
-table td, th{
+table tr{
     border: 1px solid black;
     padding: 4px;
-    background-color: rgb(27, 27, 27);
-    color: rgb(207, 207, 207);
+    background-color: rgb(39, 39, 39);
+    color: rgb(255, 255, 255);
 }
+
+table tr:nth-child(odd){
+    border: 1px solid black;
+    padding: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+table td{
+    border: 1px solid black;
+}
+
 
 
 .funcionario-div{
@@ -262,5 +294,47 @@ table td, th{
 }
 
 
+.container-geral{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #0d36a8;
+
+}
+
+.container-form{
+
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    padding: 25px;;
+    border-radius: 20px;
+
+}
+
+.form-group{
+    color: black;
+}
+
+.form-group1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    background-color: black;
+    border: black;
+}
 
 
+.create{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-top: 20px;
+}
